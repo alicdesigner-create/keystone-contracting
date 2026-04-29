@@ -73,7 +73,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-ks-dark py-[72px] px-6 md:px-12">
+    <section id="services" className="bg-ks-dark py-[72px] px-6 md:px-12" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
@@ -92,12 +92,13 @@ export default function Services() {
         </div>
 
         {/* 3-col grid with border trick */}
-        <div className="bg-ks-blue/30 p-px">
-          <div className="grid md:grid-cols-3 gap-px bg-ks-blue/30">
+        <div className="bg-ks-blue/30 p-px" style={{ backgroundColor: '#000000' }}>
+          <div className="grid md:grid-cols-3 gap-px bg-ks-blue/30" style={{ backgroundColor: '#000000' }}>
             {services.map((service) => (
               <div
                 key={service.title}
                 className="bg-ks-dark p-8 flex flex-col gap-4 hover:bg-ks-navy transition-colors"
+                style={{ backgroundColor: '#000000' }}
               >
                 <div className="w-10 h-10 border border-ks-blue flex items-center justify-center text-ks-blue-light flex-shrink-0">
                   {service.icon}
