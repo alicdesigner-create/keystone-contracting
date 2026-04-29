@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/hero-bg.png"
           alt="Keystone Contracting — Western Slope construction"
           fill
           priority
