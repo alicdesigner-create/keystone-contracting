@@ -48,13 +48,13 @@ export default function Subdivisions() {
 
         {/* Right: content — does not parallax */}
         <div className="px-10 py-16 md:px-14 md:py-20">
-          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5 text-center md:text-left">
             Featured Development
           </p>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-2">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-2 text-center md:text-left">
             West Wind Estates
           </h2>
-          <p className="font-body text-[14px] text-ks-stone mb-6">Montrose County, Colorado</p>
+          <p className="font-body text-[14px] text-ks-stone mb-6 text-center md:text-left">Montrose County, Colorado</p>
           <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8] mb-10">
             A 33-lot residential community built for long-term value and high-quality living. Thoughtfully developed in phases with strong architectural standards, creating a cohesive environment for custom homes built to last.
           </p>

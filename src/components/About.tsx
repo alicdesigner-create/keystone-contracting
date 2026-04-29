@@ -24,13 +24,13 @@ export default function About() {
     <section id="about" ref={sectionRef} className="bg-ks-navy">
       <div className="grid md:grid-cols-2">
         {/* Left: image panel with diagonal right clip + parallax */}
-        <div className="relative min-h-[320px] overflow-hidden">
+        <div className="relative h-72 md:min-h-full overflow-hidden">
           <motion.div
             className="absolute left-0 right-0"
             style={{
               top: "-10%",
               bottom: "-10%",
-              clipPath: "polygon(0 0, 100% 0, 88% 100%, 0 100%)",
+              clipPath: isMobile ? "none" : "polygon(0 0, 100% 0, 88% 100%, 0 100%)",
               y: isMobile ? 0 : panelY,
               willChange: "transform",
             }}
@@ -48,10 +48,10 @@ export default function About() {
 
         {/* Right: content — does not parallax */}
         <div className="px-10 py-16 md:px-14 md:py-20">
-          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5 text-center md:text-left">
             About Keystone Contracting
           </p>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-8">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-8 text-center md:text-left">
             Built on Execution.<br />Driven by Quality.
           </h2>
           <div className="space-y-5">

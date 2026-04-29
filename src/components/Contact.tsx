@@ -41,8 +41,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Left */}
         <div>
-          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-4">Get in Touch</p>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-6">Start Your Project</h2>
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-4 text-center md:text-left">Get in Touch</p>
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-6 text-center md:text-left">Start Your Project</h2>
           <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8] mb-10">
             Provide your project details and our team will follow up with a technical assessment, clear next steps, and a firm timeline for your vision on the Western Slope.
           </p>

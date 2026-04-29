@@ -55,17 +55,17 @@ export default function Hero() {
       <div className="relative z-20 flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 w-full py-24 md:py-0">
           <div className="max-w-2xl">
-            <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-6">
+            <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-6 text-center md:text-left">
               Montrose, CO · Western Slope
             </p>
-            <h1 className="font-heading font-black text-5xl md:text-7xl leading-[1.05] text-white mb-6 uppercase tracking-tight">
+            <h1 className="font-heading font-black text-5xl md:text-7xl leading-[1.05] text-white mb-6 uppercase tracking-tight text-center md:text-left">
               Built Right.<br />
               <span className="text-ks-accent">Built to Last.</span>
             </h1>
-            <p className="font-body font-light text-[15px] text-ks-stone leading-relaxed mb-10 max-w-md">
+            <p className="font-body font-light text-[15px] text-ks-stone leading-relaxed mb-10 max-w-md mx-auto md:mx-0">
               45 years of Western Slope expertise. From raw land to luxury custom homes — we deliver full-scale construction and development with precision at every stage.
             </p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
               <a
                 href="#contact"
                 className="font-label text-[12px] uppercase tracking-[1.5px] bg-ks-blue text-white px-6 py-3 hover:bg-ks-blue-mid transition-colors"

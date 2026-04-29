@@ -77,7 +77,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
-          <div>
+          <div className="text-center md:text-left">
             <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">What We Build</p>
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight">
               Full-Scale Construction<br />&amp; Development
