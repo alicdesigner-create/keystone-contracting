@@ -12,7 +12,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07090f] border-t border-ks-blue/30">
+    <footer className="border-t border-ks-blue/30" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 pb-6">
         {/* Top 4-col grid */}
         <div className="grid md:grid-cols-4 gap-10 pb-8 border-b border-ks-blue/20">

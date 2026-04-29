@@ -16,9 +16,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#07090f] border-b border-ks-blue transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-ks-blue transition-all duration-300 ${
         scrolled ? "shadow-[0_2px_20px_rgba(0,0,0,0.9)]" : ""
       }`}
+      style={{ backgroundColor: '#000000' }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo lockup */}
@@ -80,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden bg-[#07090f] border-t border-ks-blue px-6 py-4 flex flex-col gap-1">
+        <div className="md:hidden border-t border-ks-blue px-6 py-4 flex flex-col gap-1" style={{ backgroundColor: '#000000' }}>
           {links.map((link) => (
             <a
               key={link}
