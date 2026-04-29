@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -25,7 +26,7 @@ export default function About() {
         {/* Left: image panel with diagonal right clip + parallax */}
         <div className="relative min-h-[320px] overflow-hidden">
           <motion.div
-            className="absolute left-0 right-0 bg-ks-dark flex items-center justify-center"
+            className="absolute left-0 right-0"
             style={{
               top: "-10%",
               bottom: "-10%",
@@ -34,7 +35,14 @@ export default function About() {
               willChange: "transform",
             }}
           >
-            <span className="font-label text-[11px] tracking-[3px] uppercase text-ks-stone/30">About Image</span>
+            <Image
+              src="/images/about-bg.jpg"
+              alt="Built on Execution — Keystone Contracting"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-ks-dark/20" />
           </motion.div>
         </div>
 

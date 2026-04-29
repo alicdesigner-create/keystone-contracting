@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Read(//c/Users/aliri/OneDrive/Documentos/**)",
+      "Bash(npx create-next-app@latest keystone-contracting-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git branch *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(npx tsc *)",
+      "Bash(git commit *)",
+      "Bash(node -e \"require\\('framer-motion'\\)\")",
+      "Bash(npm install *)",
+      "PowerShell(Copy-Item *)",
+      "Bash(dir *)"
+    ]
+  }
+}

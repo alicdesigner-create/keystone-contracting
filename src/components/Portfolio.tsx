@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 const projects = [
-  "West Wind Estates",
-  "Custom Mountain Residence",
-  "Commercial Development",
-  "Luxury Custom Home",
-  "Site & Excavation Project",
-  "Subdivision Infrastructure",
+  { name: "West Wind Estates",           image: "/images/card-west-wind-estates.jpg" },
+  { name: "Custom Mountain Residence",   image: "/images/card-custom-mountain-residence.jpg" },
+  { name: "Commercial Development",      image: "/images/card-commercial-development.jpg" },
+  { name: "Luxury Custom Home",          image: "/images/card-luxury-custom-home.jpg" },
+  { name: "Site & Excavation Project",   image: "/images/card-site-excavation.jpg" },
+  { name: "Subdivision Infrastructure",  image: "/images/card-subdivision-infrastructure.jpg" },
 ];
 
 export default function Portfolio() {
@@ -17,13 +19,20 @@ export default function Portfolio() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-1">
-          {projects.map((name) => (
-            <div key={name} className="relative aspect-[4/3] bg-ks-dark border border-ks-blue group overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-label text-[10px] tracking-[2px] uppercase text-ks-stone/30">Project Image</span>
-              </div>
-              <div className="absolute inset-0 bg-ks-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <h3 className="font-heading text-[20px] text-white text-center px-6 leading-snug">{name}</h3>
+          {projects.map((project) => (
+            <div
+              key={project.name}
+              className="relative aspect-[4/3] bg-ks-dark border border-ks-blue group overflow-hidden cursor-pointer"
+            >
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <h3 className="font-heading text-[20px] text-white text-center px-6 leading-snug">{project.name}</h3>
               </div>
             </div>
           ))}
