@@ -30,8 +30,8 @@ export default function Process() {
     <section id="process" className="bg-ks-dark py-[72px] px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <p className="font-label text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">How We Work</p>
-          <h2 className="font-heading text-[36px] text-white leading-tight">
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">How We Work</p>
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight">
             A Structured Approach<br />to Building
           </h2>
         </div>
@@ -46,7 +46,7 @@ export default function Process() {
                 <span className="font-heading text-[16px] text-ks-blue-light">{step.number}</span>
               </div>
               <div>
-                <h3 className="font-label text-[14px] uppercase tracking-wider text-ks-cream mb-2">
+                <h3 className="font-label font-bold text-[14px] uppercase tracking-wider text-ks-cream mb-2">
                   {step.title}
                 </h3>
                 <p className="font-body font-light text-[12px] text-ks-stone leading-relaxed">

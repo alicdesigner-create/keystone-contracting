@@ -78,8 +78,8 @@ export default function Services() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
           <div>
-            <p className="font-label text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">What We Build</p>
-            <h2 className="font-heading text-[36px] text-white leading-tight">
+            <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">What We Build</p>
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight">
               Full-Scale Construction<br />&amp; Development
             </h2>
           </div>
@@ -102,7 +102,7 @@ export default function Services() {
                 <div className="w-10 h-10 border border-ks-blue flex items-center justify-center text-ks-blue-light flex-shrink-0">
                   {service.icon}
                 </div>
-                <h3 className="font-label text-[17px] uppercase tracking-[1px] text-ks-cream">
+                <h3 className="font-label font-extrabold text-lg uppercase tracking-[1px] text-ks-cream">
                   {service.title}
                 </h3>
                 <p className="font-body font-light text-[13px] text-ks-stone leading-relaxed flex-1">

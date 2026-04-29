@@ -14,10 +14,10 @@ export default function About() {
 
         {/* Right: content */}
         <div className="px-10 py-16 md:px-14 md:py-20">
-          <p className="font-label text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
             About Keystone Contracting
           </p>
-          <h2 className="font-heading text-[36px] text-white leading-tight mb-8">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-8">
             Built on Execution.<br />Driven by Quality.
           </h2>
           <div className="space-y-5">

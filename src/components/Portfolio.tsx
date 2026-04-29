@@ -12,8 +12,8 @@ export default function Portfolio() {
     <section id="portfolio" className="bg-ks-navy py-[72px] px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <p className="font-label text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">Recent Projects</p>
-          <h2 className="font-heading text-[36px] text-white leading-tight">Our Work</h2>
+          <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">Recent Projects</p>
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight">Our Work</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-1">
