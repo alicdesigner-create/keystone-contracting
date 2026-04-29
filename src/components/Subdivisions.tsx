@@ -1,0 +1,52 @@
+export default function Subdivisions() {
+  return (
+    <section id="subdivisions" className="bg-ks-navy border-t border-b border-ks-blue/30">
+      <div className="grid md:grid-cols-2 min-h-[480px]">
+        {/* Left: image with diagonal right clip */}
+        <div className="relative min-h-[320px]">
+          <div
+            className="absolute inset-0 bg-ks-dark/80 flex items-center justify-center"
+            style={{ clipPath: "polygon(0 0, 100% 0, 88% 100%, 0 100%)" }}
+          >
+            <span className="font-label text-[11px] tracking-[3px] uppercase text-ks-stone/30">Development Image</span>
+          </div>
+        </div>
+
+        {/* Right: content */}
+        <div className="px-10 py-16 md:px-14 md:py-20">
+          <p className="font-label text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
+            Featured Development
+          </p>
+          <h2 className="font-heading text-[36px] text-white leading-tight mb-2">
+            West Wind Estates
+          </h2>
+          <p className="font-body text-[14px] text-ks-stone mb-6">Montrose County, Colorado</p>
+          <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8] mb-10">
+            A 33-lot residential community built for long-term value and high-quality living. Thoughtfully developed in phases with strong architectural standards, creating a cohesive environment for custom homes built to last.
+          </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 pb-8 mb-8 border-b border-ks-blue/30">
+            {[
+              { number: "33", label: "Residential Lots" },
+              { number: "Multi", label: "Phase Development" },
+              { number: "100%", label: "Western Slope" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="font-heading text-[28px] text-white leading-none mb-1">{stat.number}</p>
+                <p className="font-label text-[10px] uppercase text-ks-blue-light tracking-[1.5px]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="#contact"
+            className="font-label text-[12px] uppercase tracking-[1.5px] text-ks-cream border-b border-ks-blue-mid pb-0.5 hover:text-white hover:border-white transition-colors inline-block"
+          >
+            View Development Details →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
