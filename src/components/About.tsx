@@ -55,13 +55,13 @@ export default function About() {
             Built on Execution.<br />Driven by Quality.
           </h2>
           <div className="space-y-5">
-            <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8]">
+            <p className="font-body font-light text-[14px] text-ks-cream leading-[1.8]">
               Based in <strong className="text-ks-cream font-medium">Montrose, CO</strong> with multi-generational ties across the Western Slope, Keystone Contracting represents a new venture built on old roots.
             </p>
-            <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8]">
+            <p className="font-body font-light text-[14px] text-ks-cream leading-[1.8]">
               We leverage <strong className="text-ks-cream font-medium">45 years of construction expertise</strong> to deliver full-service solutions — from raw land to a custom home that reflects your vision, your lifestyle, and your legacy.
             </p>
-            <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8]">
+            <p className="font-body font-light text-[14px] text-ks-cream leading-[1.8]">
               With specialized expertise in <strong className="text-ks-cream font-medium">high-altitude construction</strong> and mountain-specific building requirements, we help clients navigate complex conditions with confidence and precision.
             </p>
           </div>

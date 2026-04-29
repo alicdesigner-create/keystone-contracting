@@ -62,7 +62,7 @@ export default function Hero() {
               Built Right.<br />
               <span className="text-ks-accent">Built to Last.</span>
             </h1>
-            <p className="font-body font-light text-[15px] text-ks-stone leading-relaxed mb-10 max-w-md mx-auto md:mx-0">
+            <p className="font-body font-light text-[15px] text-ks-cream leading-relaxed mb-10 max-w-md mx-auto md:mx-0">
               45 years of Western Slope expertise. From raw land to luxury custom homes — we deliver full-scale construction and development with precision at every stage.
             </p>
             <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">

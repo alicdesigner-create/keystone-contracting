@@ -54,8 +54,8 @@ export default function Subdivisions() {
           <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-2 text-center md:text-left">
             West Wind Estates
           </h2>
-          <p className="font-body text-[14px] text-ks-stone mb-6 text-center md:text-left">Montrose County, Colorado</p>
-          <p className="font-body font-light text-[14px] text-ks-stone leading-[1.8] mb-10">
+          <p className="font-body text-[14px] text-ks-cream mb-6 text-center md:text-left">Montrose County, Colorado</p>
+          <p className="font-body font-light text-[14px] text-ks-cream leading-[1.8] mb-10">
             A 33-lot residential community built for long-term value and high-quality living. Thoughtfully developed in phases with strong architectural standards, creating a cohesive environment for custom homes built to last.
           </p>
 

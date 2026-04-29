@@ -103,17 +103,17 @@ export default function Services() {
                 <div className="w-10 h-10 border border-ks-blue flex items-center justify-center text-ks-blue-light flex-shrink-0">
                   {service.icon}
                 </div>
-                <h3 className="font-label font-extrabold text-lg uppercase tracking-[1px] text-ks-cream">
+                <h3 className="font-label font-extrabold text-lg uppercase tracking-[1px] text-white">
                   {service.title}
                 </h3>
-                <p className="font-body font-light text-[13px] text-ks-stone leading-relaxed flex-1">
+                <p className="font-body font-light text-[13px] text-ks-cream leading-relaxed flex-1">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-label text-[10px] uppercase text-ks-blue-light border border-ks-blue px-2 py-1 tracking-wider"
+                      className="font-label text-[10px] uppercase text-ks-accent border border-ks-blue px-2 py-1 tracking-wider"
                     >
                       {tag}
                     </span>
