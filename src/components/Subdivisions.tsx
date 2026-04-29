@@ -1,18 +1,44 @@
+"use client";
+import { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 export default function Subdivisions() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const panelY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+
   return (
-    <section id="subdivisions" className="bg-ks-navy border-t border-b border-ks-blue/30">
+    <section id="subdivisions" ref={sectionRef} className="bg-ks-navy border-t border-b border-ks-blue/30">
       <div className="grid md:grid-cols-2 min-h-[480px]">
-        {/* Left: image with diagonal right clip */}
-        <div className="relative min-h-[320px]">
-          <div
-            className="absolute inset-0 bg-ks-dark/80 flex items-center justify-center"
-            style={{ clipPath: "polygon(0 0, 100% 0, 88% 100%, 0 100%)" }}
+        {/* Left: image panel with diagonal right clip + parallax */}
+        <div className="relative min-h-[320px] overflow-hidden">
+          <motion.div
+            className="absolute left-0 right-0 bg-ks-dark/80 flex items-center justify-center"
+            style={{
+              top: "-10%",
+              bottom: "-10%",
+              clipPath: "polygon(0 0, 100% 0, 88% 100%, 0 100%)",
+              y: isMobile ? 0 : panelY,
+              willChange: "transform",
+            }}
           >
             <span className="font-label text-[11px] tracking-[3px] uppercase text-ks-stone/30">Development Image</span>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Right: content */}
+        {/* Right: content — does not parallax */}
         <div className="px-10 py-16 md:px-14 md:py-20">
           <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5">
             Featured Development

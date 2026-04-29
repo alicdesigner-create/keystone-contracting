@@ -1,13 +1,31 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 600], [0, -150]);
+
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden"
       style={{ backgroundColor: "#000000" }}
     >
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
+      {/* Background image — parallax layer only */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{ y: isMobile ? 0 : bgY, willChange: "transform" }}
+      >
         <Image
           src="/images/hero-bg.png"
           alt="Keystone Contracting — Western Slope construction"
@@ -16,12 +34,12 @@ export default function Hero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-      </div>
+      </motion.div>
 
-      {/* Gradient overlay — desktop: dark left, fades right / mobile: heavier overall */}
+      {/* Gradient overlay — static, does not parallax */}
       <div className="absolute inset-0 z-10 md:bg-gradient-to-r md:from-black/85 md:via-black/60 md:to-black/20 bg-gradient-to-b from-black/90 to-black/70" />
 
-      {/* Subtle grid overlay on top of image */}
+      {/* Subtle grid overlay — static */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
@@ -33,7 +51,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Content */}
+      {/* Text content — static, does not parallax */}
       <div className="relative z-20 flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 w-full py-24 md:py-0">
           <div className="max-w-2xl">
@@ -65,7 +83,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats bar */}
+      {/* Stats bar — static */}
       <div className="relative z-20 border-t border-ks-blue/20 bg-black/40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-3 divide-x divide-ks-blue/20">
