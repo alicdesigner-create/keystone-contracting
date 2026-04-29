@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Logo lockup */}
         <a href="#" className="flex-shrink-0 flex flex-col md:flex-row md:items-center md:gap-3">
           <Image
-            src="/images/keystone_contracting_Logo-02.png"
+            src="/images/keystone_contracting_Logo-navbar.png"
             alt="Keystone Contracting"
             width={180}
             height={40}
