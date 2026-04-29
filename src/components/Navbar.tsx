@@ -1,15 +1,29 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const links = ["About", "Services", "Subdivisions", "Process", "Portfolio", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-ks-dark border-b border-ks-blue">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-ks-blue transition-all duration-300 ${
+        scrolled
+          ? "bg-ks-navy/95 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+          : "bg-ks-dark"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo lockup */}
         <a href="#" className="flex-shrink-0 flex flex-col md:flex-row md:items-center md:gap-3">
           <Image
             src="/images/keystone_contracting_Logo-02.png"
@@ -20,32 +34,35 @@ export default function Navbar() {
             priority
           />
           <span className="hidden md:block w-px h-5 bg-ks-blue-mid/60 self-center" />
-          <span className="font-label text-[10px] md:text-[11px] tracking-widest uppercase text-ks-accent/60 mt-0.5 md:mt-0">
+          <span className="font-label font-semibold text-[10px] md:text-[11px] tracking-widest uppercase text-white mt-0.5 md:mt-0">
             Contracting &amp; Land Development
           </span>
         </a>
 
+        {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="font-label text-[12px] tracking-[2px] uppercase text-ks-stone hover:text-white transition-colors"
+              className="relative font-label font-semibold text-[12px] tracking-[2px] uppercase text-white hover:text-ks-accent active:scale-95 transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-ks-accent after:transition-all after:duration-300 hover:after:w-full"
             >
               {link}
             </a>
           ))}
         </div>
 
+        {/* CTA button */}
         <a
           href="#contact"
-          className="hidden md:inline-block font-label text-[11px] uppercase tracking-[1.5px] text-ks-accent bg-ks-blue border border-ks-blue-mid px-4 py-2 hover:bg-ks-blue-mid transition-colors"
+          className="hidden md:inline-block font-label font-bold text-[11px] uppercase tracking-[1.5px] text-white bg-ks-blue border border-ks-blue-mid px-4 py-2 hover:bg-ks-blue-mid hover:border-ks-accent/60 hover:shadow-[0_0_14px_rgba(168,196,224,0.18)] active:scale-95 transition-all duration-200"
         >
           Request a Quote
         </a>
 
+        {/* Hamburger */}
         <button
-          className="md:hidden text-ks-stone hover:text-white p-1 transition-colors"
+          className="md:hidden text-white hover:text-ks-accent p-1 transition-colors duration-200"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -63,14 +80,15 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden bg-ks-dark border-t border-ks-blue px-6 py-4 flex flex-col gap-1">
+        <div className="md:hidden bg-ks-navy/95 backdrop-blur-sm border-t border-ks-blue px-6 py-4 flex flex-col gap-1">
           {links.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="font-label text-[12px] tracking-[2px] uppercase text-ks-stone hover:text-white transition-colors py-3 border-b border-ks-blue/20 last:border-0"
+              className="font-label font-semibold text-[12px] tracking-[2px] uppercase text-white hover:text-ks-accent transition-colors duration-200 py-3 border-b border-ks-blue/20 last:border-0"
             >
               {link}
             </a>
@@ -78,7 +96,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="font-label text-[11px] uppercase tracking-[1.5px] text-ks-accent bg-ks-blue border border-ks-blue-mid px-4 py-3 text-center hover:bg-ks-blue-mid transition-colors mt-3"
+            className="font-label font-bold text-[11px] uppercase tracking-[1.5px] text-white bg-ks-blue border border-ks-blue-mid px-4 py-3 text-center hover:bg-ks-blue-mid active:scale-95 transition-all duration-200 mt-3"
           >
             Request a Quote
           </a>
