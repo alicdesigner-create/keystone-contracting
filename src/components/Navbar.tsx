@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-ks-dark border-b border-ks-blue">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex-shrink-0">
+        <a href="#" className="flex-shrink-0 flex flex-col md:flex-row md:items-center md:gap-3">
           <Image
             src="/images/keystone_contracting_Logo-02.png"
             alt="Keystone Contracting"
@@ -19,6 +19,10 @@ export default function Navbar() {
             className="h-10 w-auto"
             priority
           />
+          <span className="hidden md:block w-px h-5 bg-ks-blue-mid/60 self-center" />
+          <span className="font-label text-[10px] md:text-[11px] tracking-widest uppercase text-ks-accent/60 mt-0.5 md:mt-0">
+            Contracting &amp; Land Development
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
