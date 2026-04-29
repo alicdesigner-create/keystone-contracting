@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Col 1 */}
           <div>
             <Image
-              src="/images/keystone_contracting_Logo-02.png"
+              src="/images/keystone_contracting_Logo-footer.png"
               alt="Keystone Contracting"
               width={160}
               height={36}

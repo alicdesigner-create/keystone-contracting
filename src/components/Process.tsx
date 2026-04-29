@@ -27,7 +27,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="bg-ks-dark py-[72px] px-6 md:px-12">
+    <section id="process" className="bg-black py-[72px] px-6 md:px-12" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-3">How We Work</p>
@@ -42,7 +42,7 @@ export default function Process() {
 
           {steps.map((step) => (
             <div key={step.number} className="relative z-10 md:px-6 first:md:pl-0 last:md:pr-0 flex flex-col gap-4">
-              <div className="w-12 h-12 border border-ks-blue-mid bg-ks-dark flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 border border-ks-blue-mid bg-black flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                 <span className="font-heading text-[16px] text-ks-blue-light">{step.number}</span>
               </div>
               <div>
