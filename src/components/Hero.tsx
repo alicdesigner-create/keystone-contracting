@@ -92,7 +92,7 @@ export default function Hero() {
               { number: "33", label: "Lots · West Wind Estates" },
               { number: "100%", label: "Western Slope Focus" },
             ].map((stat) => (
-              <div key={stat.label} className="py-6 px-6 first:pl-0">
+              <div key={stat.label} className="py-6 px-6 first:pl-0 text-center md:text-left">
                 <p className="font-heading text-[32px] text-white leading-none mb-1">{stat.number}</p>
                 <p className="font-label text-[11px] text-ks-blue-light tracking-[1.5px] uppercase">{stat.label}</p>
               </div>

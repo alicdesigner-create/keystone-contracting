@@ -41,7 +41,7 @@ export default function Process() {
           <div className="hidden md:block absolute top-6 left-[calc(12.5%)] right-[calc(12.5%)] h-px bg-ks-blue/40" />
 
           {steps.map((step) => (
-            <div key={step.number} className="relative z-10 md:px-6 first:md:pl-0 last:md:pr-0 flex flex-col gap-4">
+            <div key={step.number} className="relative z-10 md:px-6 first:md:pl-0 last:md:pr-0 flex flex-col gap-4 items-center md:items-start text-center md:text-left">
               <div className="w-12 h-12 border border-ks-blue-mid bg-black flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                 <span className="font-heading text-[16px] text-ks-blue-light">{step.number}</span>
               </div>

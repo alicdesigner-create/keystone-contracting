@@ -85,7 +85,7 @@ export default function Services() {
           </div>
           <a
             href="#contact"
-            className="font-label text-[12px] text-ks-blue-light tracking-wider mt-4 md:mt-0 hover:text-white transition-colors"
+            className="font-label text-[12px] text-ks-blue-light tracking-wider mt-4 md:mt-0 hover:text-white transition-colors text-center md:text-right"
           >
             View All Services →
           </a>
@@ -97,7 +97,7 @@ export default function Services() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-ks-dark p-8 flex flex-col gap-4 hover:bg-ks-navy transition-colors"
+                className="bg-ks-dark p-8 flex flex-col gap-4 hover:bg-ks-navy transition-colors items-center md:items-start text-center md:text-left"
                 style={{ backgroundColor: '#000000' }}
               >
                 <div className="w-10 h-10 border border-ks-blue flex items-center justify-center text-ks-blue-light flex-shrink-0">
@@ -109,7 +109,7 @@ export default function Services() {
                 <p className="font-body font-light text-[13px] text-ks-cream leading-relaxed flex-1">
                   {service.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}

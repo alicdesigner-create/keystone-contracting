@@ -47,7 +47,7 @@ export default function About() {
         </div>
 
         {/* Right: content — does not parallax */}
-        <div className="px-10 py-16 md:px-14 md:py-20">
+        <div className="px-10 py-16 md:px-14 md:py-20 text-center md:text-left">
           <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5 text-center md:text-left">
             About Keystone Contracting
           </p>

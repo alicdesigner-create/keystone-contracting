@@ -47,7 +47,7 @@ export default function Subdivisions() {
         </div>
 
         {/* Right: content — does not parallax */}
-        <div className="px-10 py-16 md:px-14 md:py-20">
+        <div className="px-10 py-16 md:px-14 md:py-20 text-center md:text-left">
           <p className="font-label font-bold text-[11px] tracking-[3px] uppercase text-ks-blue-light mb-5 text-center md:text-left">
             Featured Development
           </p>
@@ -66,7 +66,7 @@ export default function Subdivisions() {
               { number: "Multi", label: "Phase Development" },
               { number: "100%", label: "Western Slope" },
             ].map((stat) => (
-              <div key={stat.label}>
+              <div key={stat.label} className="text-center md:text-left">
                 <p className="font-heading text-[28px] text-white leading-none mb-1">{stat.number}</p>
                 <p className="font-label text-[10px] uppercase text-ks-blue-light tracking-[1.5px]">{stat.label}</p>
               </div>
