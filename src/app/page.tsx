@@ -1,27 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Subdivisions from "@/components/Subdivisions";
-import Process from "@/components/Process";
-import Portfolio from "@/components/Portfolio";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main className="pt-16">
-        <Hero />
-        <About />
-        <Services />
-        <Subdivisions />
-        <Process />
-        <Portfolio />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-950 text-white text-center px-6">
+      <h1 className="text-4xl font-bold mb-4">Site Under Maintenance</h1>
+      <p className="text-gray-400 text-lg max-w-md">
+        We&apos;re working on something great. Please check back soon.
+      </p>
+    </main>
   );
 }
